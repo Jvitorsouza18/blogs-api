@@ -1,4 +1,4 @@
-const { BlogPost, User, PostCategory, Category } = require('../../database/models/index');
+const { BlogPost, User, Category } = require('../../database/models/index');
 const { getUserId } = require('../../helpers/getUser');
 const { CustomError } = require('../../utils/CustomError');
 

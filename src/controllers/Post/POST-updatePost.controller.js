@@ -1,4 +1,4 @@
-const { updatePostService } = require('../../services/Post/PUT-updatePost.service');
+const { updatePostService } = require('../../services/Post/POST-updatePost.service');
 
 async function updatePostController(req, res) {
   const { id } = req.params;

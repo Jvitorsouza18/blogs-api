@@ -1,4 +1,5 @@
 const { Router } = require('express');
+const { deleteUserController } = require('../controllers/User/USER-deleteUser.controller');
 const { getUserByIdController } = require('../controllers/User/USER-getUserById.controller');
 const { getUsersController } = require('../controllers/User/USER-getUsers.controller');
 const { loginController } = require('../controllers/User/USER-login.controller');
@@ -19,6 +20,7 @@ userRoute
     registerController,
     )
   .get('/user', tokenHandler, getUsersController)
-  .get('/user/:id', tokenHandler, getUserByIdController);
+  .get('/user/:id', tokenHandler, getUserByIdController)
+  .delete('/user/me', tokenHandler, deleteUserController);
 
 module.exports = { userRoute };
